@@ -104,7 +104,11 @@
     padding:72px 0 96px;
     overflow:hidden;
     background:var(--hero-maroon);
+    min-height:calc(100vh - 62px);
+    display:flex;
+    align-items:center;
   }
+  .hero .wrap{width:100%;}
   .hero .wrap{
     display:grid;
     grid-template-columns: 1.15fr 0.85fr;
@@ -251,8 +255,15 @@
     font-family:var(--font-mono); font-size:12px; color:var(--contact-accent-light); margin-bottom:14px; display:block;
   }
 
-  .research-photo{margin-top:52px;}
-  .research-photo img{width:100%; border:1px solid var(--cream);}
+  .research-photo-grid{
+    margin-top:52px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:12px;
+  }
+  .research-photo-grid img{
+    width:100%; aspect-ratio:3/4; object-fit:cover; border:1px solid var(--cream);
+  }
   .research-photo-cap{
     font-family:var(--font-mono); font-size:11.5px; color:var(--cream-muted); margin-top:12px; max-width:60ch;
   }
@@ -411,10 +422,12 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:900px){
+    .hero{min-height:auto; padding:56px 0 64px;}
     .hero .wrap{grid-template-columns:1fr; gap:44px;}
     .hero-visual{max-width:380px;}
     .about-grid{grid-template-columns:1fr;}
     .interest-grid{grid-template-columns:1fr 1fr;}
+    .research-photo-grid{grid-template-columns:1fr 1fr;}
     .teach-grid{grid-template-columns:1fr;}
     .award-grid{grid-template-columns:1fr;}
     .pub-item{grid-template-columns:1fr;}
@@ -635,8 +648,11 @@
       </div>
     </div>
 
-    <div class="research-photo reveal">
+    <div class="research-photo-grid reveal">
       <img src="assets/ai_slide.jpg" alt="Sumi Lee presenting on AI's structural impact on HRD at an academic conference">
+      <img src="assets/comp_slide.jpg" alt="Sumi Lee presenting on HRD professional competencies">
+      <img src="assets/copresent.jpg" alt="Sumi Lee co-presenting research with collaborators">
+      <img src="assets/solo_presenting.jpg" alt="Sumi Lee presenting research on career transitions">
     </div>
   </div>
 </section>
