@@ -78,7 +78,12 @@
     border-bottom:1px solid var(--line-soft);
   }
   .nav .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px;}
-  .nav-name{font-family:var(--font-display); font-weight:600; font-size:18px; color:var(--cream);}
+  .nav-name{font-family:var(--font-display); font-weight:600; font-size:18px; color:var(--cream); line-height:1.15;}
+  .nav-tagline{
+    display:block;
+    font-family:var(--font-mono); font-weight:400; font-size:9.5px; text-transform:uppercase;
+    letter-spacing:0.12em; color:var(--cream-muted); margin-top:2px;
+  }
   .nav-links{display:flex; gap:22px; list-style:none; margin:0; padding:0;}
   .nav-links a{
     font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:0.08em;
@@ -140,6 +145,21 @@
     font-size:14px; color:var(--cream-muted); margin-bottom:34px; line-height:1.9;
   }
   .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
+  .hero-quote{
+    margin-top:56px;
+    padding-top:28px;
+    border-top:1px solid var(--line-soft);
+    max-width:38ch;
+  }
+  .hero-quote p{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:400;
+    font-size:18px;
+    line-height:1.55;
+    color:var(--cream-soft);
+    margin:0;
+  }
   .btn{
     display:inline-block;
     font-family:var(--font-mono);
@@ -455,7 +475,7 @@
 
 <nav class="nav">
   <div class="wrap">
-    <div class="nav-name">Sumi Lee</div>
+    <div class="nav-name">Sumi Lee<span class="nav-tagline">My Story in HRD</span></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#project-experience">Practice</a></li>
@@ -484,6 +504,9 @@
       <div class="cta-row">
         <a href="#contact" class="btn btn-solid">Contact</a>
         <a href="#research" class="btn btn-line">View research</a>
+      </div>
+      <div class="hero-quote">
+        <p>"My own career is, in a way, my first case study in transition."</p>
       </div>
     </div>
     <div class="hero-visual">
