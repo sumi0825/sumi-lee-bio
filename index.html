@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumi Lee, Ph.D. — HRD Researcher &amp; Educator</title>
+<meta name="description" content="Sumi Lee, Ph.D. — Clinical Assistant Professor, Texas A&M University. Research on AI, learning culture, and workplace sustainability.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@1,20..72,400;1,20..72,500&family=Schibsted+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --maroon:#1C1C1E;
+    --maroon-2:#161617;
+    --maroon-deep:#0F0F10;
+    --near-black:#0A0A0B;
+    --cream:#F3EFE4;
+    --cream-soft: rgba(243,239,228,0.78);
+    --cream-muted: rgba(243,239,228,0.55);
+    --gold:#5B93B8;
+    --gold-light:#8FC4E3;
+    --contact-bg:#7A3A16;
+    --contact-bg-deep:#5C2A0F;
+    --contact-accent:#F0A860;
+    --contact-accent-light:#F7C68F;
+    --amber-bg:#4A2E12;
+    --amber-bg-2:#3A2410;
+    --steel-bg:#132029;
+    --steel-bg-2:#0D1820;
+    --hero-maroon:#260000;
+    --hero-maroon-2:#1D0000;
+    --line: rgba(243,239,228,0.20);
+    --line-soft: rgba(243,239,228,0.12);
+    --radius: 3px;
+    --max: 1120px;
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Schibsted Grotesk', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--maroon);
+    color:var(--cream);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  section{position:relative;}
+
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; margin:0; letter-spacing:-0.015em; color:var(--cream);}
+  .i{font-style:italic; font-weight:500;}
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:1px; background:var(--gold-light);
+    display:inline-block;
+  }
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(38,0,0,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px;}
+  .nav-name{font-family:var(--font-display); font-weight:600; font-size:18px; color:var(--cream);}
+  .nav-links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:0.08em;
+    text-decoration:none; color:var(--cream-soft);
+    padding-bottom:3px; border-bottom:1px solid transparent;
+    transition:border-color .2s, color .2s;
+  }
+  .nav-links a:hover{ color:var(--gold-light); border-color:var(--gold-light);}
+  .nav-toggle{display:none; background:none; border:none; font-size:22px; color:var(--cream); cursor:pointer;}
+
+  @media (max-width: 760px){
+    .nav-links{
+      position:fixed; top:60px; left:0; right:0; bottom:0;
+      background:var(--hero-maroon); flex-direction:column; padding:32px;
+      gap:20px; transform:translateY(-110%); transition:transform .3s ease;
+    }
+    .nav-links.open{transform:translateY(0);}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:72px 0 96px;
+    overflow:hidden;
+    background:var(--hero-maroon);
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero-kicker{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:400;
+    font-size:17px;
+    color:var(--cream-muted);
+    margin:0 0 18px;
+    letter-spacing:0.01em;
+  }
+  .hero h1{
+    font-size:clamp(44px, 6.2vw, 72px);
+    line-height:0.98;
+    margin-bottom:20px;
+  }
+  .hero-suffix{ color:var(--cream-muted); font-weight:400; }
+  .hero-sub{
+    font-size:19px;
+    color:var(--cream-soft);
+    max-width:46ch;
+    margin-bottom:28px;
+  }
+  .hero-affil{
+    font-size:14px; color:var(--cream-muted); margin-bottom:34px; line-height:1.9;
+  }
+  .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    text-decoration:none;
+    padding:13px 22px;
+    border-radius:var(--radius);
+    transition:transform .15s ease, background .2s ease, color .2s ease;
+  }
+  .btn-solid{background:var(--contact-accent); color:var(--maroon-deep);}
+  .btn-solid:hover{background:var(--contact-accent-light); transform:translateY(-1px);}
+  .btn-line{border:1px solid var(--cream); color:var(--cream);}
+  .btn-line:hover{background:var(--cream); color:var(--maroon-deep);}
+
+  .hero-visual{position:relative;}
+  .hero-frame{
+    position:relative;
+    border:1px solid var(--cream);
+    padding:14px;
+    background:var(--hero-maroon-2);
+  }
+  .hero-frame img{width:100%; height:auto; display:block;}
+  .hero-frame::after{
+    content:"";
+    position:absolute; inset:-14px -14px auto auto;
+    width:64px; height:64px;
+    border-top:1px solid var(--gold);
+    border-right:1px solid var(--gold);
+    top:-14px; right:-38px;
+  }
+  .hero-caption{
+    margin-top:14px;
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    color:var(--cream-muted);
+    letter-spacing:0.03em;
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section{padding:88px 0;}
+  .section-alt{background:var(--maroon-2);}
+  .section-head{margin-bottom:48px; max-width:64ch;}
+  .section-head h2{font-size:clamp(28px,3.4vw,38px); margin-top:14px;}
+  .section-head p{color:var(--cream-soft); margin-top:16px; font-size:16.5px;}
+
+  /* ---------- ABOUT / TIMELINE ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:64px;
+    align-items:start;
+  }
+  .about-copy p{margin:0 0 22px; color:var(--cream-soft); font-size:16px; line-height:1.75;}
+  .about-copy p:first-of-type{
+    color:var(--cream);
+    font-weight:500;
+  }
+
+  .about-media img{
+    width:100%;
+    border:1px solid var(--cream);
+  }
+  .about-media-caption{
+    font-family:var(--font-mono); font-size:11.5px; color:var(--cream-muted); margin-top:12px;
+  }
+
+  .timeline{
+    margin-top:40px;
+    position:relative;
+    padding-left:28px;
+    border-left:1px dashed var(--gold);
+  }
+  .tl-item{position:relative; padding-bottom:26px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-dot{
+    position:absolute; left:-33px; top:3px;
+    width:10px; height:10px; border-radius:50%;
+    background:var(--maroon); border:1.5px solid var(--gold);
+  }
+  .tl-year{font-family:var(--font-mono); font-size:12px; color:var(--gold-light); letter-spacing:0.04em;}
+  .tl-role{font-size:15.5px; margin-top:4px; color:var(--cream);}
+
+  /* ---------- PROJECT EXPERIENCE ---------- */
+  #project-experience{background:var(--steel-bg);}
+  #project-experience .eyebrow{color:var(--gold-light);}
+  #project-experience .eyebrow::before{background:var(--gold-light);}
+  #project-experience .grants-table th{border-bottom:1px solid var(--cream);}
+  #project-experience .grants-table td.amt{color:var(--gold-light);}
+  #project-experience .grants-table tr:hover td{background:var(--steel-bg-2);}
+
+  /* ---------- RESEARCH INTERESTS ---------- */
+  #research.section-alt{background:var(--amber-bg);}
+  #research .section-head p{color:var(--cream-soft);}
+  #research .eyebrow{color:var(--contact-accent-light);}
+  #research .eyebrow::before{background:var(--contact-accent-light);}
+  .interest-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:rgba(243,239,228,0.14);
+    border:1px solid rgba(243,239,228,0.14);
+  }
+  .interest-card{
+    background:var(--amber-bg-2);
+    padding:30px 26px;
+  }
+  .interest-card h3{font-size:17px; margin-bottom:10px; line-height:1.3;}
+  .interest-card p{font-size:15px; color:var(--cream-soft); margin:0; line-height:1.55;}
+  .interest-card p strong{color:var(--contact-accent-light); font-weight:700;}
+  .interest-mark{
+    font-family:var(--font-mono); font-size:12px; color:var(--contact-accent-light); margin-bottom:14px; display:block;
+  }
+
+  .research-photo{margin-top:52px;}
+  .research-photo img{width:100%; border:1px solid var(--cream);}
+  .research-photo-cap{
+    font-family:var(--font-mono); font-size:11.5px; color:var(--cream-muted); margin-top:12px; max-width:60ch;
+  }
+
+  /* ---------- PUBLICATIONS ---------- */
+  .pub-list{border-top:1px solid var(--line);}
+  .pub-item{
+    padding:28px 0;
+    border-bottom:1px solid var(--line);
+    display:grid;
+    grid-template-columns: 90px 1fr;
+    gap:24px;
+  }
+  .pub-year{font-family:var(--font-mono); font-size:14px; color:var(--gold-light); padding-top:3px;}
+  .pub-title{font-family:var(--font-display); font-size:19px; font-weight:600; margin-bottom:6px; line-height:1.35; color:var(--cream);}
+  .pub-venue{font-size:14px; color:var(--cream-muted); font-style:italic; margin-bottom:10px;}
+  .pub-venue b{color:var(--cream); font-weight:700; font-style:normal;}
+  .pub-desc{font-size:15px; color:var(--cream-soft); margin:0;}
+  .pub-badge{
+    display:inline-block; font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase;
+    letter-spacing:0.06em; color:var(--contact-accent); border:1px solid var(--contact-accent); padding:2px 8px; border-radius:20px;
+    margin-left:10px; vertical-align:middle;
+  }
+
+  .pub-photos{
+    display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:52px;
+  }
+  .pub-photos figure{margin:0;}
+  .pub-photos img{width:100%; border:1px solid var(--cream);}
+  .pub-photos figcaption{
+    font-family:var(--font-mono); font-size:11px; color:var(--cream-muted); margin-top:10px;
+  }
+
+  /* ---------- TEACHING ---------- */
+  .teach-grid{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap:60px;
+    align-items:start;
+  }
+  .course-list{list-style:none; margin:0; padding:0;}
+  .course-list li{
+    display:flex; align-items:baseline; gap:14px;
+    padding:13px 0; border-bottom:1px solid var(--line-soft);
+    font-size:15px; color:var(--cream);
+  }
+  .course-code{font-family:var(--font-mono); font-size:13px; color:var(--gold-light); white-space:nowrap; min-width:78px;}
+
+  .video-frame{
+    position:relative; width:100%; aspect-ratio:16/9;
+    border:1px solid var(--cream); background:var(--near-black); overflow:hidden;
+  }
+  .video-frame iframe{width:100%; height:100%; border:none; display:block;}
+  .video-cap{font-family:var(--font-mono); font-size:11.5px; color:var(--cream-muted); margin-top:12px;}
+
+  .voices{margin-top:46px;}
+  .voices h3{font-size:15px; text-transform:uppercase; letter-spacing:0.08em; font-family:var(--font-mono); font-weight:500; color:var(--cream-soft); margin-bottom:22px;}
+  .quote{
+    position:relative;
+    padding:6px 0 22px 34px;
+    margin-bottom:22px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .quote:last-child{border-bottom:none; margin-bottom:0;}
+  .quote::before{
+    content:"\201C";
+    position:absolute; left:0; top:-6px;
+    font-family:var(--font-display); font-size:40px; color:var(--gold); line-height:1;
+  }
+  .quote p{margin:0 0 8px; font-size:17px; font-family:var(--font-display); font-style:italic; font-weight:400; color:var(--cream); line-height:1.5;}
+  .quote cite{font-family:var(--font-mono); font-size:11.5px; color:var(--cream-muted); font-style:normal;}
+
+  /* ---------- GRANTS TABLE ---------- */
+  .grants-table{width:100%; border-collapse:collapse; margin-top:8px;}
+  .grants-table th{
+    font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.06em;
+    text-align:left; color:var(--cream-muted); padding:0 16px 12px 0; border-bottom:1px solid var(--cream);
+  }
+  .grants-table td{
+    padding:16px 16px 16px 0; border-bottom:1px solid var(--line-soft); font-size:14.5px; vertical-align:top; color:var(--cream-soft);
+  }
+  .grants-table td.amt{font-family:var(--font-mono); white-space:nowrap; color:var(--cream);}
+  .grant-desc{display:inline-block; margin-top:5px; font-size:12.5px; color:var(--cream-muted); font-style:italic;}
+  .status-pill{
+    font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:0.05em;
+    padding:3px 9px; border-radius:20px; white-space:nowrap;
+  }
+  .status-funded{background:rgba(240,168,96,0.20); color:var(--contact-accent-light);}
+  .status-completed{background:rgba(243,239,228,0.14); color:var(--cream-soft);}
+  .status-pending{background:rgba(243,239,228,0.08); color:var(--cream-muted);}
+  .grants-table{ overflow-x:auto; display:block; }
+
+  /* ---------- AWARDS ---------- */
+  .awards-band{
+    background:var(--contact-bg-deep);
+    color:var(--cream);
+    padding:64px 0;
+  }
+  .awards-band .section-head p{color:var(--cream-soft);}
+  .awards-band .eyebrow{color:var(--contact-accent-light);}
+  .awards-band .eyebrow::before{background:var(--contact-accent-light);}
+  .award-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; background:rgba(243,239,228,0.15);}
+  .award-card{padding:34px 30px; background:var(--contact-bg-deep);}
+  .award-card h3{font-size:19px; color:var(--cream); margin-bottom:10px; line-height:1.35;}
+  .award-card p{font-size:14px; color:var(--cream-soft); margin:0;}
+  .award-year{font-family:var(--font-mono); font-size:12px; color:var(--contact-accent-light); margin-bottom:12px; display:block;}
+
+  /* ---------- CERTIFICATIONS ---------- */
+  .cert-list{display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;}
+  .cert-pill{
+    font-family:var(--font-mono); font-size:12.5px;
+    border:1px solid var(--line); border-radius:20px;
+    padding:9px 16px; color:var(--cream-soft);
+  }
+  .cert-pill b{color:var(--gold-light); font-weight:500;}
+
+  /* ---------- SERVICE ---------- */
+  .service-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
+  .service-list li{
+    display:grid; grid-template-columns: 1fr 1.6fr; gap:24px;
+    padding:20px 0; border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  .service-role{font-family:var(--font-display); font-size:19px; font-weight:600; color:var(--cream); line-height:1.35;}
+  .service-org{color:var(--cream-soft); font-size:13.5px; line-height:1.5; padding-top:2px;}
+  .service-years{font-family:var(--font-mono); font-size:11.5px; color:var(--gold-light); margin-top:4px;}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  .contact{
+    background:var(--contact-bg);
+    color:var(--cream);
+    padding:96px 0 56px;
+  }
+  .contact .eyebrow{color:var(--contact-accent-light);}
+  .contact .eyebrow::before{background:var(--contact-accent-light);}
+  .contact h2{
+    font-size:clamp(32px,4vw,46px);
+    color:var(--cream);
+    margin-top:16px;
+    max-width:18ch;
+  }
+  .contact-links{
+    display:flex; gap:36px; flex-wrap:wrap; margin-top:40px;
+  }
+  .contact-links a{
+    font-family:var(--font-mono); font-size:14px; text-decoration:none;
+    color:var(--cream); border-bottom:1px solid rgba(243,239,228,0.4);
+    padding-bottom:4px; transition:border-color .2s, color .2s;
+  }
+  .contact-links a:hover{color:var(--contact-accent-light); border-color:var(--contact-accent-light);}
+  .footer-line{
+    margin-top:80px; padding-top:24px; border-top:1px solid rgba(243,239,228,0.2);
+    font-family:var(--font-mono); font-size:11.5px; color:rgba(243,239,228,0.55);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .hero .wrap{grid-template-columns:1fr; gap:44px;}
+    .hero-visual{max-width:380px;}
+    .about-grid{grid-template-columns:1fr;}
+    .interest-grid{grid-template-columns:1fr 1fr;}
+    .teach-grid{grid-template-columns:1fr;}
+    .award-grid{grid-template-columns:1fr;}
+    .pub-item{grid-template-columns:1fr;}
+    .pub-year{padding-top:0;}
+    .pub-photos{grid-template-columns:1fr;}
+    .service-list li{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 20px;}
+    .interest-grid{grid-template-columns:1fr;}
+    .section{padding:64px 0;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important; animation:none !important;}
+  }
+
+  /* scroll reveal */
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-name">Sumi Lee</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#project-experience">Practice</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="hero-kicker">Clinical Assistant Professor, Texas A&amp;M University</p>
+      <h1>Sumi Lee<span class="hero-suffix">, Ph.D.</span></h1>
+      <p class="hero-sub">Bridging 25 years of corporate HRD practice with research on AI, learning culture, and workplace sustainability.</p>
+      <p class="hero-affil">
+        Department of Educational Administration and Human Resource Development<br>
+        College of Education and Human Development<br>
+        Texas A&amp;M University
+      </p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-solid">Contact</a>
+        <a href="#research" class="btn btn-line">View research</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-frame">
+        <img src="assets/hero.jpg" alt="Portrait of Sumi Lee">
+      </div>
+      <div class="hero-caption">College Station, Texas</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">About</div>
+      <h2>From the HRD department floor to <span class="i">the front of the classroom</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>Before her doctoral studies, Sumi Lee spent 25 years as an HRD practitioner at Kia Corporation in South Korea — serving as an HRM Manager and In-house Instructor, building onboarding systems, leadership competency models, and coaching programs. That experience shapes how she approaches research: not as theory built at a distance from practice, but as a bridge back to it.</p>
+        <p>In 2019, she left Kia to pursue a Ph.D. in Learning, Leadership, and Organization Development at the University of Georgia, examining how learning culture and knowledge sharing shape organizational performance and sustainability. She joined UGA as adjunct faculty in 2024, then became Clinical Assistant Professor at Texas A&amp;M in 2025.</p>
+        <p>Today, her research sits at the intersection of AI, organizational learning, and sustainability — asking how HRD can keep pace with a changing world of work, and who gets included in that future. Her work has earned the AHRD Esworthy Malcolm S. Knowles Dissertation of the Year Award and the KAHRD Best Paper Award; she currently serves as Track Chair Editor for HRD Teaching, Student Engagement, and Faculty Development at AHRD. At heart, she remains a practitioner who also publishes.</p>
+      </div>
+      <div>
+        <div class="about-media">
+          <img src="assets/about.jpg" alt="Sumi Lee holding a Texas A&M Aggies flag">
+        </div>
+        <div class="about-media-caption">Texas A&amp;M University, College Station</div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div class="tl-year">1995 – 2019</div>
+            <div class="tl-role">HRD Practitioner, HRM Manager &amp; In-house Instructor, Kia Corporation, South Korea</div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div class="tl-year">2020 – 2024</div>
+            <div class="tl-role">Ph.D., Learning, Leadership &amp; Organization Development, University of Georgia</div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div class="tl-year">2024 – 2025</div>
+            <div class="tl-role">Adjunct Faculty, University of Georgia</div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div class="tl-year">2025 – present</div>
+            <div class="tl-role">Clinical Assistant Professor, Texas A&amp;M University</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT EXPERIENCE ================= -->
+<section class="section" id="project-experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">HRD practice, 2005–2019</div>
+      <h2>Project experience <span class="i">at Kia Corporation</span></h2>
+      <p>Before her research career, Sumi led and contributed to HRD initiatives spanning leadership development, onboarding, training systems, and coaching at Kia Corporation, South Korea.</p>
+    </div>
+
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="grants-table project-table">
+        <thead>
+          <tr>
+            <th>Years</th>
+            <th>Project</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="amt">2016–2019</td>
+            <td>Global Citizenship Organization Development (OD) Project</td>
+            <td>Project Manager, Program Design and Development</td>
+          </tr>
+          <tr>
+            <td class="amt">2016–2019</td>
+            <td>Leadership Competency Modeling Project</td>
+            <td>Leadership Competency Analysis Workshop and Program Implementation</td>
+          </tr>
+          <tr>
+            <td class="amt">2016–2019</td>
+            <td>Lifecycle Retirement Learning System Project</td>
+            <td>Project Manager, Learning System Establishment and Program Planning</td>
+          </tr>
+          <tr>
+            <td class="amt">2016–2017</td>
+            <td>New-Employee Onboarding Program Project</td>
+            <td>Learning Program Planning and Teaching</td>
+          </tr>
+          <tr>
+            <td class="amt">2016–2017</td>
+            <td>HRD System Development Initiative Project</td>
+            <td>Analysis and Report Documentation</td>
+          </tr>
+          <tr>
+            <td class="amt">2016–2017</td>
+            <td>Structured On-the-Job Training (S-OJT) Project</td>
+            <td>S-OJT System Establishment</td>
+          </tr>
+          <tr>
+            <td class="amt">2016–2017</td>
+            <td>In-House Trainer Development Project</td>
+            <td>Project Manager, Trainer Guide Development and Training</td>
+          </tr>
+          <tr>
+            <td class="amt">2015–2016</td>
+            <td>Program Evaluation Project — Applying Phase 3 of Kirkpatrick's Model</td>
+            <td>Evaluation and Analysis</td>
+          </tr>
+          <tr>
+            <td class="amt">2014–2015</td>
+            <td>Online Learning Program Project (Sales Strategies Training)</td>
+            <td>Project Manager, Curriculum Design and Training Video Production (12 courses)</td>
+          </tr>
+          <tr>
+            <td class="amt">2005–2015</td>
+            <td>Customer Relationship Coaching Program</td>
+            <td>Co-Project Manager, Program Development and Teaching (22 courses)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESEARCH INTERESTS ================= -->
+<section class="section section-alt" id="research">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Research interests</div>
+      <h2>One question, <span class="i">many threads:</span> how do people and organizations learn to change?</h2>
+      <p>Sumi's research asks a consistent question across different contexts — how do organizations, and the people inside them, learn, adapt, and thrive through change?</p>
+    </div>
+
+    <div class="interest-grid reveal">
+      <div class="interest-card">
+        <span class="interest-mark">01</span>
+        <p><strong>AI in HRD Practice</strong> — how organizations adopt and institutionalize AI within HRD roles, competencies, and practice.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-mark">02</span>
+        <p><strong>Sustainability</strong> — how intangible resources, learning culture, and knowledge sharing sustain long-term organizational performance.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-mark">03</span>
+        <p><strong>Leadership</strong> — how authentic leadership sustains ethical, high-performing organizations, including as AI reshapes teams and decisions.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-mark">04</span>
+        <p><strong>Underrepresented voices</strong> — how women, displaced workers, and marginalized groups — including North Korean women resettling in South Korea — navigate resistance, transition, and inclusion at work.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-mark">05</span>
+        <p><strong>Student learning &amp; career readiness</strong> — how HRD students learn, engage, and prepare for the workforce.</p>
+      </div>
+    </div>
+
+    <div class="research-photo reveal">
+      <img src="assets/ai_slide.jpg" alt="Sumi Lee presenting on AI's structural impact on HRD at an academic conference">
+    </div>
+  </div>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section class="section" id="publications">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Featured research</div>
+      <h2>A selection of <span class="i">recent work</span></h2>
+      <p>Spanning Sumi's core research threads. Full publication list available on request.</p>
+    </div>
+
+    <div class="pub-list reveal">
+      <div class="pub-item">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">Unlocking the Potential of Intangible Resources and Capabilities for Performance and Sustainability in HRD</div>
+          <div class="pub-venue"><b>Lee, S.</b> &amp; Han, S. — Human Resource Development International</div>
+          <p class="pub-desc">A resource-based view of how intangible organizational assets drive sustainable performance.</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">How Trust and IT Usage Empower Knowledge Sharing for Sustainability Goals</div>
+          <div class="pub-venue"><b>Lee, S.</b>, Kim, K., Ha, Y., &amp; Han, S. — New Horizons in Adult Education and Human Resource Development</div>
+          <p class="pub-desc">How trust and IT usage work together to enable knowledge sharing in service of sustainability goals.</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2025</div>
+        <div>
+          <div class="pub-title">Authentic Leadership and Organizational Sustainability</div>
+          <div class="pub-venue"><b>Lee, S.</b>, Park, S., Han, S., &amp; Chai, D. — European Journal of Training and Development</div>
+          <p class="pub-desc">How authentic leadership sustains organizations through knowledge sharing and proactive personality.</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2025</div>
+        <div>
+          <div class="pub-title">Resistance Is the Power to Say No, and Women Resist in Their Own Way: A Typology Development</div>
+          <div class="pub-venue">Cho, Y., Park, J., <b>Lee, S.</b>, You, J., &amp; Yoon, S. — Human Resource Development Quarterly</div>
+          <p class="pub-desc">A typology of how women leaders resist token status in the workplace.</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2025</div>
+        <div>
+          <div class="pub-title">From Working Life to Retirement: Transformative Learning as a Catalyst for Transition</div>
+          <div class="pub-venue"><b>Lee, S.</b>, Park, M., &amp; Yim, J. H. — Educational Gerontology</div>
+          <p class="pub-desc">How transformative learning supports the passage from working life into retirement.</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2025</div>
+        <div>
+          <div class="pub-title">Knowledge Sharing as a Cornerstone for Sustainability: The Dual Mediating Roles of Job Engagement and Meaningful Work</div>
+          <div class="pub-venue"><b>Lee, S.</b> &amp; Han, S. — European Journal of Training and Development</div>
+          <p class="pub-desc">How job engagement and meaningful work help translate knowledge sharing into sustainability outcomes.</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2024</div>
+        <div>
+          <div class="pub-title">Sustainability Within the HRD Field: A Systematic Review<span class="pub-badge">Best Paper</span></div>
+          <div class="pub-venue"><b>Lee, S.</b>, Han, S., &amp; Oh, J. — New Horizons in Adult Education and Human Resource Development</div>
+          <p class="pub-desc">KAHRD Best Paper Award, 1st Place — mapping how sustainability has been studied across the HRD literature.</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2024</div>
+        <div>
+          <div class="pub-title">Learning Organization Culture and Knowledge Sharing: The Mediating Role of Social Capital</div>
+          <div class="pub-venue"><b>Lee, S.</b> &amp; Han, S. — Journal of Workplace Learning</div>
+          <p class="pub-desc">How social capital mediates the relationship between learning organization culture and knowledge sharing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEACHING ================= -->
+<section class="section section-alt" id="teaching">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Teaching</div>
+      <h2>In <span class="i">the classroom</span></h2>
+      <p>Sumi has taught across the undergraduate and graduate HRD curriculum at Texas A&amp;M and the University of Georgia, from foundational courses to instructional design and program evaluation.</p>
+    </div>
+
+    <div class="teach-grid">
+      <div class="reveal">
+        <ul class="course-list">
+          <li><span class="course-code">EHRD 203</span><span>Foundation of HRD</span></li>
+          <li><span class="course-code">EHRD 391</span><span>Measurement &amp; Evaluation in HRD</span></li>
+          <li><span class="course-code">EHRD 402</span><span>Instructional Technology &amp; Design</span></li>
+          <li><span class="course-code">EHRD 405</span><span>Principles and Practices of Leadership</span></li>
+          <li><span class="course-code">EHRD 490</span><span>Research in HRD</span></li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <div class="video-frame">
+          <iframe src="https://drive.google.com/file/d/1XPHKHJwNRXogkQfefvXEKmVgSKLvueKS/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <div class="video-cap">A Semester in the Classroom — EHRD 402, Spring 2026</div>
+
+        <div class="voices">
+          <h3>Student voices</h3>
+
+          <div class="quote">
+            <p>The instructor is my favorite professor! Best professor I've ever had.</p>
+            <cite>EHRD 391, Fall 2025</cite>
+          </div>
+
+          <div class="quote">
+            <p>Professor Lee is very wise and does everything in her class very intentionally. Her presentations/lectures are great and engaging!</p>
+            <cite>EHRD 490, Fall 2025</cite>
+          </div>
+
+          <div class="quote">
+            <p>She always left her door open for us! &amp; if we couldn't make it, she would go out of her way to schedule a call for us.</p>
+            <cite>EHRD 391, Fall 2025</cite>
+          </div>
+
+          <div class="quote">
+            <p>Professor Lee is an angel. She is very communicative and her checking in frequently motivated me to perform better. A refreshing professor for a course like this. Great to keep college kids feeling supported and heard.</p>
+            <cite>EHRD 203, Summer 2026</cite>
+          </div>
+
+          <div class="quote">
+            <p>Even when I was absent, she let me know she was there for me during office hours to catch up on anything. I took her up on that and was able to understand any questions I had.</p>
+            <cite>EHRD 391, Fall 2025</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GRANTS ================= -->
+<section class="section" id="grants">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Grants</div>
+      <h2>Funded &amp; <span class="i">ongoing projects</span></h2>
+    </div>
+
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="grants-table">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Project</th>
+            <th>Funder</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="amt">2026</td>
+            <td>AI Readiness in EAHR: A Practical Workshop Series<br><span class="grant-desc">Designing and delivering a workshop series to build AI readiness among EAHR faculty and students.</span></td>
+            <td>Texas A&amp;M University, Seed Grant</td>
+            <td class="amt">$15,000</td>
+            <td><span class="status-pill status-funded">Funded</span></td>
+          </tr>
+          <tr>
+            <td class="amt">2026</td>
+            <td>Aggie HRD AI Workshop<br><span class="grant-desc">Hands-on AI workshop for HRD graduate students at Texas A&amp;M.</span></td>
+            <td>TAMU CEHD Student Impact Grant</td>
+            <td class="amt">$1,500</td>
+            <td><span class="status-pill status-funded">Funded</span></td>
+          </tr>
+          <tr>
+            <td class="amt">2025</td>
+            <td>Outplacement Education in HRD</td>
+            <td>Ingeus Korea, Seoul</td>
+            <td class="amt">$3,000</td>
+            <td><span class="status-pill status-completed">Completed</span></td>
+          </tr>
+          <tr>
+            <td class="amt">2022–2023</td>
+            <td>Support the Design of Content and Processes for Professional Learning for School Leaders</td>
+            <td>Marietta City Schools, GA</td>
+            <td class="amt">$125,000</td>
+            <td><span class="status-pill status-completed">Completed</span></td>
+          </tr>
+          <tr>
+            <td class="amt">2022–2023</td>
+            <td>Optimizing Learning Performance through Analytics Project</td>
+            <td>KORAD Co., Ltd., South Korea</td>
+            <td class="amt">$62,000</td>
+            <td><span class="status-pill status-pending">Pending</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AWARDS ================= -->
+<section class="awards-band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Recognition</div>
+      <h2><span class="i">Awards</span></h2>
+    </div>
+    <div class="award-grid reveal">
+      <div class="award-card">
+        <span class="award-year">2025</span>
+        <h3>AHRD Esworthy Malcolm S. Knowles Dissertation of the Year Award</h3>
+        <p>Academy of Human Resource Development</p>
+      </div>
+      <div class="award-card">
+        <span class="award-year">2025</span>
+        <h3>Korea-SIG Sponsored TEAM-Grant Award, First Place</h3>
+        <p>Academy of Human Resource Development in the America</p>
+      </div>
+      <div class="award-card">
+        <span class="award-year">2024</span>
+        <h3>KAHRD Best Paper Award, 1st Place</h3>
+        <p>"Sustainability Within the HRD Field: A Systematic Review"</p>
+      </div>
+      <div class="award-card">
+        <span class="award-year">2020–2024</span>
+        <h3>Merit Fellowship</h3>
+        <p>Department of Lifelong Education, Administration, and Policy, University of Georgia</p>
+      </div>
+      <div class="award-card">
+        <span class="award-year">2018</span>
+        <h3>New Kia Key Talents Award</h3>
+        <p>Kia Corporation, South Korea</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Certifications</div>
+      <h2>Professional certifications in HRD, <span class="i">coaching &amp; education</span></h2>
+    </div>
+    <div class="cert-list reveal">
+      <div class="cert-pill"><b>2026</b> · Teaching the AI Fluency Framework, Anthropic</div>
+      <div class="cert-pill"><b>2024</b> · International Christian Coach, ICCF</div>
+      <div class="cert-pill"><b>2024</b> · Organization Coaching, University of Georgia</div>
+      <div class="cert-pill"><b>2024</b> · DEI (Diversity, Equity &amp; Inclusion), University of Georgia</div>
+      <div class="cert-pill"><b>2014</b> · KCA Coach, Korea Coach Association</div>
+      <div class="cert-pill"><b>2013</b> · Sales Manager Coach, Incoaching</div>
+      <div class="cert-pill"><b>2012</b> · Lifelong Education Teacher, Hanyang University</div>
+      <div class="cert-pill"><b>2009</b> · Human Resources Development Expert (HRDE)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE ================= -->
+<section class="section section-alt" id="service">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Professional service</div>
+      <h2>Leadership <span class="i">in the field</span></h2>
+    </div>
+    <ul class="service-list reveal">
+      <li>
+        <div>
+          <div class="service-role">Track Chair Editor</div>
+          <div class="service-years">2026</div>
+        </div>
+        <div class="service-org">Academy of Human Resource Development — HRD Teaching, Student Engagement, and Faculty Development track</div>
+      </li>
+      <li>
+        <div>
+          <div class="service-role">Publication Manager</div>
+          <div class="service-years">2025–26</div>
+        </div>
+        <div class="service-org">Scholar-Practitioner SIG, Academy of Human Resource Development</div>
+      </li>
+      <li>
+        <div>
+          <div class="service-role">Board Director</div>
+          <div class="service-years">2025–26</div>
+        </div>
+        <div class="service-org">Korean Academy of Human Resource Development in the America (KAHRDA)</div>
+      </li>
+      <li>
+        <div>
+          <div class="service-role">Program Chair</div>
+          <div class="service-years">2024</div>
+        </div>
+        <div class="service-org">Asian-AHRD Research Conference</div>
+      </li>
+      <li>
+        <div>
+          <div class="service-role">Founder</div>
+          <div class="service-years">2023–26</div>
+        </div>
+        <div class="service-org">Global Christian Coaching (GCC)</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Let's talk</div>
+    <h2>Open to collaboration on HRD research, <span class="i">practice, and teaching.</span></h2>
+    <div class="contact-links">
+      <a href="mailto:sumi0825@tamu.edu">sumi0825@tamu.edu</a>
+      <a href="https://directory.education.tamu.edu/view/sumi0825">TAMU faculty profile</a>
+      <a href="https://scholar.google.com/citations?hl=en&amp;user=VIZz04QAAAAJ">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/sumi-lee-5098ab403/">LinkedIn</a>
+    </div>
+    <div class="footer-line">
+      <span>Sumi Lee, Ph.D. — Texas A&amp;M University</span>
+      <span>College Station, Texas</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
